@@ -1,0 +1,90 @@
+To create database
+------------------
+	CREATE DATABASE database_name;
+
+To use the database
+-------------------
+	USE database_name;
+
+To create table
+---------------
+	CREATE TABLE table_name(
+		column1 datatype,
+		column2 datatype,..);
+
+To view the result
+------------------
+	Keyword -> SELECT
+	SELECT * FROM table_name; --> To view all datas(*)
+	SELECT column1,column2 FROM table_name; --> To view some columns.
+
+To insert values
+----------------
+	INSERT INTO table_name(column1,column1,...)
+	VALUES(value1,value2,..);
+
+To add new column
+-----------------
+	ALTER TABLE table_name ADD column datatype;
+
+To update data
+--------------
+	UPDATE table_name SET column = value;
+
+To add condition
+----------------
+	Keyword - WHERE
+	UPDATE table_name SET column = value WHERE condition;
+
+To delete a row
+---------------
+	Keyword - DELETE
+	DELETE FROM table_name WHERE condition;
+
+To delete all rows
+------------------
+	Keyword - Truncate
+	TRUNCATE TABLE table_name;
+
+To delete table/database
+------------------------
+	Keyword - DROP
+	DROP TABLE/DATABASE table_name/database_name;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
