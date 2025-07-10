@@ -42,16 +42,12 @@ on C.Customer_ID = O.Customer_ID;
 -- Scenario 4: Show all customers and all orders, matched where possible
 
 select C.Customer_ID, C.Name, O.Order_ID, O.Product
-from Customers C union Orders O 
+from Customers C left join Orders O 
+on C.Customer_ID = O.Customer_ID
+union all
+select C.Customer_ID, C.Name, O.Order_ID, O.Product
+from Customers C right join Orders O 
 on C.Customer_ID = O.Customer_ID;
-
-SELECT C.Customer_ID, C.Name, O.Order_ID, O.Product
-FROM Customers C LEFT JOIN Orders O 
-ON C.Customer_ID = O.Customer_ID
-UNION
-SELECT C.Customer_ID, C.Name, O.Order_ID, O.Product
-FROM Customers C RIGHT JOIN Orders O 
-ON C.Customer_ID = O.Customer_ID;
 
 
 -- Scenario 5: Get customers who ordered a “Mouse”
